@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.container {
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (orientation: portrait) {
+    .container {
+        width: 80vw;
+        height: 80vw;
+    }
+}
+
+.container div {
+    width: 33.33333%;
+    height: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 165px;
+    cursor: pointer;
+}
+
+#box1, #box2, #box4, #box5, #box7, #box8 {
+    border-right: 5px solid black;
+}
+#box1, #box2, #box3, #box4, #box5, #box6 {
+    border-bottom: 5px solid black;
+}
+
+.noalert1, .noalert2 {
+    display: none;
+}
+
+.alert1, .alert2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    line-height: 250%;
+    background-color: azure;
+    border: 3px solid blue;
+    color: blue;
+}
+
+.alert2 {
+    border: 3px solid red;
+    color: red;
+}
+
+@media (orientation: portrait) {
+    .alert1, .alert2 {
+        width: 80vw;
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: 720px) {
+    .container div {
+        font-size: 130px;
+    }
+    .alert1, .alert2 {
+        font-size: 30px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+    .container div {
+        font-size: 95px;
+    }
+    .alert1, .alert2 {
+        font-size: 25px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 430px) {
+    .alert1, .alert2 {
+        font-size: 20px;
+    }
+}
+
+
+@media (orientation: landscape) and (max-height: 750px) {
+    .alert1, .alert2 {
+        font-size: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .container div {
+        font-size: 130px;
+    }
+    .alert1, .alert2 {
+        font-size: 25px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .container div {
+        font-size: 95px;
+    }
+    .alert1, .alert2 {
+        font-size: 22px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 400px) {
+    .container div {
+        font-size: 80px;
+    }
+    .alert1, .alert2 {
+        font-size: 20px;
+    }
+}
